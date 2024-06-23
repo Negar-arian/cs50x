@@ -1,0 +1,14 @@
+sort1 uses: Bubble sort
+
+How do you know?: sort1 had the most average runing time in sorting numbers that were already sorted, while
+  it had the lowest average runing time in sorting reversed numbers.
+
+sort2 uses: Merge sort
+
+How do you know?: The average runing time of sort2 was much more than others in random and reversed numbers,
+  which means this algorithm is Merge sort.
+
+sort3 uses: Selection sort
+
+How do you know?: sort3's runing time in sorting random and reversed numbers,and it's runnig time in sorting
+   sorted numbers wasn't quite differnt which means it's big O and big omega are the same.

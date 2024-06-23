@@ -1,0 +1,5 @@
+The average danceability of this person's 100 songs is more than average valence and energy moreover average energy in more then 0.5
+I think this person's Audio Aura tend to be Orange and Purple.
+
+I believe in addition to using the average of energy , valence and danceability we should consider the number of times
+that user played a song and we better use ML to caleculate the Audio Aura.
