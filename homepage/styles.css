@@ -1,0 +1,64 @@
+/* Stylesheet for Pigs for Noobs! website. */
+/* General indentation. */
+.nav
+{
+    color: black;
+    background-color: #B4D4FF;
+    padding: 10px;
+}
+.indent
+{
+    margin-left: 200pt;
+    margin-right: 200pt;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
+h1
+{
+    margin-left: 200pt;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
+h4
+{
+    margin-left: 200pt;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
+p
+{
+    margin-left: 200pt;
+    margin-right: 200pt;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
+/* Indents an image. */
+.indent_img
+{
+    margin-top: 20px;
+    margin-left: 200pt;
+    margin-right: 200pt;
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+body
+{
+    color: black;
+    background-color: #ffffff;
+}
+/* Solid border. */
+hr.solid
+{
+    margin-left: 200pt;
+    margin-right: 200pt;
+    border-top: 3px solid #B4D4FF;
+    border-radius: 5px;
+}
+
+
