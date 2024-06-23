@@ -1,0 +1,107 @@
+code khodam:
+      RGBTRIPLE temp_array[height][width];
+      float avred,avgreen,avblue;
+      int counter ;
+      int a,b;
+      for(int i = 0;i < height;i++)
+      {
+             for(int j = 0;j < width;j++)
+             {
+                avred = 0;
+                avgreen = 0;
+                avblue = 0;
+                counter = 0;
+                for(int k = -1;k < 2;k++)
+                {
+                   for(int t = -1;t < 2 ;t++)
+                   {
+                       a = i+k;
+                       b = j+t;
+                       if (a < height && b < width && a >= 0 && b >= 0)
+                       {
+                           avred += image[a][b].rgbtRed;
+                           avgreen += image[a][b].rgbtGreen;
+                           avblue += image[a][b].rgbtblue;
+                           counter++;
+                       }
+                   }
+                }
+                avred = round(avred / counter);
+                avgreen = round(avgreen / counter);
+                avblue = round(avblue / counter);
+                temp_array[i][j].rgbtRed = avred;
+                temp_array[i][j].rgbtGreen = avgreen;
+                temp_array[i][j].rgbtBlue = avblue;
+        }
+    }
+    for(int z = 0; z < height; z++)
+    {
+            for(int x = 0; x < width; x++)
+            {
+                image[z][x] = temp_array[z][x];
+            }
+    }
+    return ;
+
+
+-----------------------------------------------------------------------------------
+
+bakhshe amade :
+      RGBTRIPLE temp_array[height][width];
+    float avRed, avGreen, avBlue;
+    int counter;
+    int c,d;
+    for (int i = 0; i < height; i++)
+    {
+        // cycle columns
+        for (int j = 0; j < width; j++)
+        {
+            counter = 0;
+            avRed = 0;
+            avGreen = 0;
+            avBlue = 0;
+            for (int a = -1; a < 2; a++)
+            {
+                // cycle columns within 9 cell square
+                for (int b = -1; b < 2; b++)
+                {
+                    // work only with cells that exist
+                    c = i + a;
+                    d = j + b;
+
+                    if (c < height && d < width && c >= 0 && d >= 0)
+                    {
+
+                        avRed += image[c][d].rgbtRed;
+                        avGreen += image[c][d].rgbtGreen;
+                        avBlue += image[c][d].rgbtBlue;
+
+                        // count existing cells within 9 cell square
+                        counter++;
+                    }
+                }
+            }
+
+            // Find average value and round double to nearest integer
+            avRed = round(avRed / counter);
+            avGreen = round(avGreen / counter);
+            avBlue = round(avBlue / counter);
+
+            // Update blured image array with average values
+            temp_array[i][j].rgbtRed = avRed;
+            temp_array[i][j].rgbtGreen = avGreen;
+            temp_array[i][j].rgbtBlue = avBlue;
+        }
+    }
+
+    // overwrite the variable image with blured image
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = temp_array[i][j];
+        }
+    }
+
+    return;
