@@ -1,0 +1,276 @@
+
+* {
+  font-family: "Ubuntu", Verdana, sans-serif;
+}
+
+.content-wrapper {
+display: grid;
+min-height: 60vh;
+align-items: center;
+}
+
+.track-name { word-wrap: break-word; }
+
+.music-player {
+  height: 70%;
+  padding-top: 30px; padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music-details {
+  display: flex;
+  padding-top: 25px; padding-bottom: 25px;
+  align-items: center; justify-content: center;
+  border-radius: 10px;
+  background-color: #ffd500;
+  margin-top: 25px;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 25px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  color: black;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1.0;
+}
+
+.slider-container {
+  width: 85%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: black;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.seek_slider::-moz-range-thumb,
+.volume_slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: black;
+  cursor: pointer;
+  border-radius: 80%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+opacity: 1.0;
+}
+
+.seek_slider {
+width: 60%;
+border-radius: 2px;
+}
+
+.volume_slider {
+width: 30%;
+border-radius: 2px;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+padding: 10px;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+cursor: pointer;
+}
+
+div.music-details div.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10%;
+}
+
+div.card div.card-body, div.cards-aligned {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.page-background-boxes {
+  background-color: #001524;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='228' height='228' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%231d1e23' fill-opacity='0.43'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.43'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.text-yellow {
+  color: #ffd500;
+}
+
+.bg-yellow{
+  background-color: #ffd500;
+}
+
+#fingerguns-img {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-position: 0 0;
+  background-color: transparent;
+}
+
+.gradient-carousel {
+  position: relative;
+  display: inline-block;
+}
+.gradient-carousel:after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  display: inline-block;
+  background: linear-gradient(to top, rgba(0,0,0,.90) 5%, rgba(0,0,0,0) 100%); /* W3C */
+
+}
+
+#about-me-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-position: 0 0;
+  background-color: transparent;
+}
+
+.card {
+  overflow: hidden;
+}
+
+img.img-fit-crop {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  object-position: 0 0;
+  transition: transform 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.08s;
+  border-radius: 2px;
+}
+
+img.img-fit-crop:hover {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  object-position: 0 0;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+}
+
+video {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 2px;
+  transition: transform 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.08s;
+}
+
+video:hover {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 2px;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gradient-text-yellow {
+  background-color: yellow;
+  background-image: linear-gradient(45deg, #ffd500, #e63946);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background-color: blue;
+  background-image: linear-gradient(45deg, #1C3144, #2CACC9);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+h1 {
+  font-family: "Press Start 2P", Georgia;
+}
+
+.about-hello-world {
+  font-family: "Ubuntu Mono", Georgia;
+}
+
+p {
+  font-family: "Ubuntu", Verdana;
+  border-left: 1px;
+  border-left-color: #6c757d;
+  border-left-style: solid;
+  border-width: thin;
+  padding-inline: 10px;
+}
+
+p.letter-big::first-letter {
+  font-family: "Press Start 2P", Georgia;
+  background-color: blue;
+  background-image: linear-gradient(45deg, #1C3144, #2CACC9);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
