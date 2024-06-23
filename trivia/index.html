@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function ()
+            {
+                let incorrects = document.querySelectorAll(".incorrect");
+                let correct = document.querySelector(".correct");
+
+
+                for(let i = 0; i < incorrects.length; i++)
+                {
+                    incorrects[i].addEventListener('click', function(event) {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+
+                correct.addEventListener("click", function ()
+                {
+                correct.style.backgroundColor = "green";
+                document.querySelector("#feedback1").innerHTML = "Correct!";
+                });
+
+                document.querySelector("#check").addEventListener("click", function () {
+                let input = document.querySelector("input");
+                if (input.value.includes("Honey"))
+                {
+                    input.style.backgroundColor = "green";
+                    document.querySelector("#feedback2").innerHTML = "Correct!";
+                }
+                else {
+                    input.style.backgroundColor = "red";
+                    document.querySelector("#feedback2").innerHTML = "Incorrect";
+                }
+
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What was the first soft drink in space?</h3>
+                <button class = "incorrect"  >Royal</button>
+                <button class = "correct" >Coca Cola</button>
+                <button class = "incorrect" >Pepsi</button>
+
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which is the only edible food that never goes bad?</h3>
+                <input type = 'text'></input>
+                <button id = "check" 
+                > Check Answer</button>
+                <p id = "feedback2"> </p>
+            </div>
+        </div>
+    </body>
+</html>
